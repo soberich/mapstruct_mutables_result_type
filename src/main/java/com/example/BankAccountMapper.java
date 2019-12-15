@@ -12,7 +12,7 @@ public abstract class BankAccountMapper extends GenericMapper {
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "status", ignore = true)
-//    @BeanMapping(resultType = ModifiableBankAccount.class)
+    @BeanMapping(resultType = ModifiableBankAccount.class)
     public abstract /*Modifiable*/BankAccount toEntity(BankAccountCreateCommand source);
 
     @Mapping(target = "status", ignore = true)
