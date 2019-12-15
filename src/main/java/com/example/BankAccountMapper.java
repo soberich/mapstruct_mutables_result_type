@@ -16,7 +16,7 @@ public abstract class BankAccountMapper extends GenericMapper {
     public abstract /*Modifiable*/BankAccount toEntity(BankAccountCreateCommand source);
 
     @Mapping(target = "status", ignore = true)
-//    @BeanMapping(resultType = ModifiableBankAccount.class)
+    @BeanMapping(resultType = ModifiableBankAccount.class)
     public abstract /*Modifiable*/BankAccount toEntity(@Context Serializable pk, BankAccountUpdateCommand source);
 
     public abstract BankAccountCreateView toCreateView(BankAccount source);
